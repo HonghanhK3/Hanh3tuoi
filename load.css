@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url('ttend.gif');
+    background-image: url('endsua1.gif');
     background-size: cover; /* Đảm bảo GIF phủ toàn bộ nền */
     background-repeat: no-repeat; /* Không lặp lại GIF */
     display: flex;

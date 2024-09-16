@@ -18,6 +18,7 @@ body{
     background-position: center; /* Căn giữa ảnh */
     background-repeat: no-repeat; 
 }
+
 .container{
     position: relative;
     width: 100%;
