@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồng Hạnh</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body >
+    <div class="video">
+        <video autoplay muted loop>
+            <source src="nendong.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="snow"></div>
+    <div class="envelope">
+        <div class="back"></div>
+        <div class="letter">
+            <form id="loginForm" action="" method="post">
+                <div class="form-group">
+                    <input type="text" id="username" class="form-input" name="username" placeholder="Tên đăng nhập" required >
+                    <input type="number" id="date" class="form-input" name="date" placeholder="Mật khẩu" min="15" max="25" required>
+                </div> 
+                <input type="submit" value="Nhấn Enter" class="form-submit" >
+            </form>
+        </div>
+        <div class="front"></div>
+        <div class="top"></div>
+        <div class="shadow"></div>
+    </div>
+    <div class="canvas"></div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            // Ngăn không cho form tự động gửi dữ liệu
+            event.preventDefault(); 
+
+            // Lấy giá trị người dùng nhập vào
+            var username = document.getElementById("username").value;
+            var date = document.getElementById("date").value;
+
+            // Kiểm tra điều kiện đăng nhập 
+            if (username === "Hanh3tuoi" && date === "17") {
+                // Điều hướng đến trang nếu thông tin hợp lệ
+                window.location.href = "HongHanh2.html";
+            } else {
+                // Hiển thị cảnh báo nếu thông tin không đúng
+                alert("Sai gồi !");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

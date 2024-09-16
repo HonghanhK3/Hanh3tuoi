@@ -1,0 +1,182 @@
+body{
+    cursor: url(doi.png) , auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh ;
+    width: 100%;
+    transform: scale(0.77); 
+    transform-origin: 0 0 ;
+    }
+    
+    .video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        transform: translate(-50%,-50%);
+        background-position-y: -60px ;
+    }
+    .envelope{
+        position: relative;
+        cursor: url(phuong.png) , auto ;
+        margin-left: 950px
+    }
+    .envelope{
+        transition: transform 0.3s ease;
+        transform: rotate(-180deg);
+        animation-name: beat;
+        animation-duration : 1s;
+        animation-iteration-count: infinite;
+        animation: attention 1s cubic-bezier(0.8, 0, 1, 1) infinite alternate;
+    }
+    .envelope:hover {
+        transform: scale(2.2);
+        top: 75px;
+    }
+    @keyframes attention {
+        100% {
+            margin-top: 30px;
+        }
+    }
+    .snow,
+    .snow ::before,
+    .snow ::after{
+        content: '';
+        position: absolute;
+        background-size: 400px 200px;
+        top: -500px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(4px 4px at 100px 50px , #fff, transparent),
+        radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+        radial-gradient(3px 3px at 300px 250px, #fff, transparent),
+        radial-gradient(4px 4px at 400px 350px, #fff, transparent),
+        radial-gradient(6px 6px at 500px 100px, #fff, transparent),
+        radial-gradient(3px 3px at 50px 200px, #fff, transparent),
+        radial-gradient(4px 4px at 150px 300px, #fff, transparent),
+        radial-gradient(6px 6px at 120px 400px, #fff, transparent),
+        radial-gradient(3px 3px at 350px 500px, #fff, transparent);
+        animation: falling 3s linear infinite;
+    }
+    .snow::before{
+        margin-left: -350px;
+        opacity: 0.7;
+        filter: blur(1px);
+        animation-direction: reverse ;
+        animation-duration: 6s;
+    }
+    @keyframes falling {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(400px);
+        }
+    }
+    .back{
+        position: relative;
+        width: 250px;
+        height: 200px;
+        background: #ce0606;
+        box-shadow: -5px 10px 90px rgb(165, 42, 87);
+    }
+    .front{
+        position: absolute;
+        border-right: 130px solid #edb201;
+        border-top: 100px solid transparent;
+        border-bottom:  100px solid transparent;
+        height: 0;
+        width: 0;
+        top: 0;
+        left: 120px;
+        z-index: 3;
+    }
+    .front::before{
+        content: "";
+        position: absolute;
+        border-left: 130px solid #edb201;
+        border-top: 100px solid transparent;
+        border-bottom:  100px solid transparent;
+        height: 0;
+        width: 0;
+        top: -100px;
+        left: -120px;
+    }
+    .front:after{
+        content: '';
+        position: absolute;
+        border-bottom:  105px  solid #bc1313;
+        border-left: 125px solid transparent;
+        border-right: 125px solid transparent;
+        height: 0;
+        width: 0;
+        top: -5px;
+        left: -120px;
+    }
+    .top{
+        position: absolute;
+        border-top: 105px solid #bc1313;
+        border-left: 125px solid transparent;
+        border-right: 125px solid transparent;
+        height: 0;
+        width: 0;
+        top: 0;
+        transform-origin:  top;
+        transition: 0.4s;
+    }
+    .envelope:hover .top{
+        transform: rotateX(160deg);
+    }
+    .letter{
+        position: absolute;
+        width: 230px;
+        height: 180px;
+        top: 10px;
+        left: 10px;
+        border-radius: 7px;
+        transition: 0.2s;
+        box-shadow: inset 10px 0px 15px 0px rgba(0, 0,0, 0.1);
+        background-image: url(Endthiepdau.png) ;
+        background-position: center ;
+        background-repeat: no-repeat;
+    }
+    .envelope:hover .letter{
+        transform: translateY(-100px);
+        z-index: 2;
+    }
+    .form-group{
+        flex-grow: 1;
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    .form-input{
+        transform: scale(0.5);
+        color: #f3d530;
+        text-align: center;
+        width: 68%;
+        margin-left: 13px;
+        height: 27px;
+        border-radius: 30px;
+        background-color: #ffffff05;
+        backdrop-filter: blur(10px);
+
+    }
+    .form-input::placeholder{
+        text-align: center;
+        color: #f3d530
+    }
+    .form-submit{
+        background: linear-gradient( to right, #ce0606, #d16125, #d5b31b);
+        color: #fff;
+        width: 60%;
+        height: 30px;
+        text-transform: uppercase;
+        margin-left: 45px;
+        transition: 0.25S ease-in-out;
+        transform: scale(0.4);
+        border-radius: 20px;
+    }
